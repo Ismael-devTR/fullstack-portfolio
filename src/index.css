@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Oswald:wght@200..700&display=swap');
+:root {
+  /* COLOR SYSTEM */
+
+  /* backgrounds */
+  --bg-page: #1A1A1A;
+  --bg-card: #0D0D0D;
+  --bg-surface: #2D2D2D;
+  --bg-placeholder: #3D3D3D;
+  /* accents */
+  --orange-primary: #FF6B35;
+  --teal-success: #00D4AA;
+  /* neutral */
+  --white-primary: #FFFFFF;
+  --gray-600: #666666;
+  --gray-500: #444444;
+
+
+  /* TYPOGRAPHY SYSTEM */
+  /* font families */
+  --font-display: "Oswald";
+  --font-mono: "JetBrains Mono";
+  /* font sizes */
+  --font-size-5xl: 3rem; /* 48px */
+  --font-size-4xl: 2.5rem; /* 40px */
+  --font-size-3xl: 1.5rem; /* 24px */
+  --font-size-2xl: 1.25rem; /* 20px */
+  --font-size-xl: 1rem; /* 16px */
+  --font-size-lg: 0.81rem; /* 13px */
+  --font-size-base: 0.75rem; /* 12px */
+  --font-size-md: 0.69rem; /* 11px */
+  --font-size-sm: 0.63rem; /* 10px */
+  --font-size-xs: 0.56rem; /* 9px */
+
+
+  /* SPACING SYSTEM */
+  --space-9: 2rem; /* 32px */
+  --space-8: 1.5rem; /* 24px */
+  --space-6: 1rem; /* 16px */
+  --space-5: 0.75rem; /* 12px */
+  --space-4: 0.5rem; /* 8px */
+  --space-2: 0.25rem; /* 4px */
+  --space-1: 0.125rem; /* 2px */
+
+  /* FONT WEIGHTS */
+  --font-weight-700: 700;
+  --font-weight-600: 600;
+  --font-weight-400: 400;
+}
+
+;
