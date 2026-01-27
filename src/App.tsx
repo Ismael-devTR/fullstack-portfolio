@@ -16,22 +16,30 @@ function App() {
           </div>
         </section>
         <section className="metrics-container">
-          <div className="metric-card p5">
-            <span className="font-mono text-gray-600 text-base">YEARS</span>
-            <h6 className="font-display text-white text-5xl ">5+</h6>
+          <div className="metric-card bg-orange p5">
+            <span className="font-mono text-base">YEARS</span>
+            <h6 className="font-display text-5xl ">5+</h6>
           </div>
-          <div className="metric-card p5">
+          <div className="metric-card bd-card p5">
             <span className="font-mono text-gray-600 text-base">Clients</span>
             <h6 className="font-display text-white text-5xl ">5+</h6>
           </div>
-            <div className="metric-card p5">
+            <div className="metric-card bd-card p5">
             <span className="font-mono text-gray-600 text-base">Projects</span>
             <h6 className="font-display text-white text-5xl ">5+</h6>
           </div>
-            <div className="metric-card p5">
+            <div className="metric-card bd-card p5">
             <span className="font-mono text-gray-600 text-base">Tools</span>
             <h6 className="font-display text-white text-5xl ">5+</h6>
           </div>
+        </section>
+        <section className="projects-container">
+          <span className="font-mono text-orange">// PROJECTS</span>
+          <div className="projects-title">
+            <h3 className="font-display text-white text-2xl">RECENT WORK</h3>
+            <a className="font-mono text-orange" href="http://">Show_all()</a>
+          </div>
+
         </section>
       </section>
     </div>
