@@ -20,15 +20,15 @@ function App() {
             <span className="font-mono text-base">YEARS</span>
             <h6 className="font-display text-5xl ">5+</h6>
           </div>
-          <div className="metric-card bd-card p5">
+          <div className="metric-card bg-card p5">
             <span className="font-mono text-gray-600 text-base">Clients</span>
             <h6 className="font-display text-white text-5xl ">5+</h6>
           </div>
-            <div className="metric-card bd-card p5">
+          <div className="metric-card bg-card p5">
             <span className="font-mono text-gray-600 text-base">Projects</span>
             <h6 className="font-display text-white text-5xl ">5+</h6>
           </div>
-            <div className="metric-card bd-card p5">
+          <div className="metric-card bg-card p5">
             <span className="font-mono text-gray-600 text-base">Tools</span>
             <h6 className="font-display text-white text-5xl ">5+</h6>
           </div>
@@ -39,7 +39,41 @@ function App() {
             <h3 className="font-display text-white text-2xl">RECENT WORK</h3>
             <a className="font-mono text-orange" href="http://">Show_all()</a>
           </div>
-
+          <div className="card-container gap-5">
+            <div className="card">
+              img
+              <div className="description bg-card gap-4 p-6">
+                <span className="font-mono text-orange text-base">type: fullstack</span>
+                <span className="font-mono text-white text-xl">project title</span>
+                <p className="font-mono text-gray-600 text-xl">descriptions here</p>
+              </div>
+            </div>
+            <div className="card">
+              img
+              <div className="description bg-card gap-4 p-6">
+                <span className="font-mono text-orange text-base">type: fullstack</span>
+                <span className="font-mono text-white text-xl">project title</span>
+                <p className="font-mono text-gray-600 text-xl">descriptions here</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="stack-container gap-5">
+          <span className="font-mono text-orange">// TECH_STACK</span>
+          <h3 className="font-display text-white text-2xl">TECHNOLOGIES</h3>
+          <div className="chip-container gap-4">
+            <div className="bg-dark-surface font-mono text-md text-white p-4 border-placeholder">React</div>
+            <span className="bg-dark-surface font-mono text-md text-white p-4 border-placeholder">TS</span>
+            <span className="bg-dark-surface font-mono text-md text-white p-4 border-placeholder">Node</span>
+            <span className="bg-dark-surface font-mono text-md text-white p-4 border-placeholder">SQL</span>
+          </div>
+        </section>
+        <section className="contact bg-card p-8 gap-5">
+          <span className="font-mono text-orange">// CONTACT</span>
+          <h3 className="font-display text-white text-2xl">LET'S BUILD</h3>
+          <p className="font-mono text-gray-600 text-xl">Available for freelance and full-time opportunities</p>
+          <span className="text-teal font-mono text-base">dev.tristan.romero@gmail.com</span>
+          <button type="button" className="button-site bg-orange text-base font-semibold ">Contact()</button>
         </section>
       </section>
     </div>

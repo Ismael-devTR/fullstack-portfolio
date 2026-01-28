@@ -1,9 +1,9 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -13,257 +13,291 @@ a{
 
 /* TEXT COLORS */
 .text-white {
-  color: var(--white-primary);
+    color: var(--white-primary);
 }
 
 .text-orange {
-  color: var(--orange-primary);
+    color: var(--orange-primary);
 }
 
 .text-teal {
-  color: var(--teal-success);
+    color: var(--teal-success);
 }
 
 .text-gray-600 {
-  color: var(--gray-600);
+    color: var(--gray-600);
 }
 
 .text-gray-500 {
-  color: var(--gray-500);
+    color: var(--gray-500);
 }
 
 /* FONT FAMILIES */
 .font-display {
-  font-family: var(--font-display);
+    font-family: var(--font-display);
 }
 
 .font-mono {
-  font-family: var(--font-mono);
+    font-family: var(--font-mono);
 }
 
 /* FONT SIZES */
 .text-5xl {
-  font-size: var(--font-size-5xl);
+    font-size: var(--font-size-5xl);
 }
 
 .text-4xl {
-  font-size: var(--font-size-4xl);
+    font-size: var(--font-size-4xl);
 }
 
 .text-3xl {
-  font-size: var(--font-size-3xl);
+    font-size: var(--font-size-3xl);
 }
 
 .text-2xl {
-  font-size: var(--font-size-2xl);
+    font-size: var(--font-size-2xl);
 }
 
 .text-xl {
-  font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl);
 }
 
 .text-lg {
-  font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg);
 }
 
 .text-base {
-  font-size: var(--font-size-base);
+    font-size: var(--font-size-base);
 }
 
 .text-md {
-  font-size: var(--font-size-md);
+    font-size: var(--font-size-md);
 }
 
 .text-sm {
-  font-size: var(--font-size-sm);
+    font-size: var(--font-size-sm);
 }
 
 .text-xs {
-  font-size: var(--font-size-xs);
+    font-size: var(--font-size-xs);
 }
 
 /* FONT WEIGHTS */
 .font-bold {
-  font-weight: var(--font-weight-700);
+    font-weight: var(--font-weight-700);
 }
 
 .font-semibold {
-  font-weight: var(--font-weight-600);
+    font-weight: var(--font-weight-600);
 }
 
 .font-normal {
-  font-weight: var(--font-weight-400);
+    font-weight: var(--font-weight-400);
 }
 
 /* SPACING - PADDING */
 .p-9 {
-  padding: var(--space-9);
+    padding: var(--space-9);
 }
 
 .p-8 {
-  padding: var(--space-8);
+    padding: var(--space-8);
 }
 
 .p-6 {
-  padding: var(--space-6);
+    padding: var(--space-6);
 }
 
 .p-5 {
-  padding: var(--space-5);
+    padding: var(--space-5);
 }
 
 .p-4 {
-  padding: var(--space-4);
+    padding: var(--space-4);
 }
 
 .p-2 {
-  padding: var(--space-2);
+    padding: var(--space-2);
 }
 
 .p-1 {
-  padding: var(--space-1);
+    padding: var(--space-1);
 }
 
 /* SPACING - MARGIN */
 .m-9 {
-  margin: var(--space-9);
+    margin: var(--space-9);
 }
 
 .m-8 {
-  margin: var(--space-8);
+    margin: var(--space-8);
 }
 
 .m-6 {
-  margin: var(--space-6);
+    margin: var(--space-6);
 }
 
 .m-5 {
-  margin: var(--space-5);
+    margin: var(--space-5);
 }
 
 .m-4 {
-  margin: var(--space-4);
+    margin: var(--space-4);
 }
 
 .m-2 {
-  margin: var(--space-2);
+    margin: var(--space-2);
 }
 
 .m-1 {
-  margin: var(--space-1);
+    margin: var(--space-1);
 }
 
 /* SPACING - GAP */
 .gap-9 {
-  gap: var(--space-9);
+    gap: var(--space-9);
 }
 
 .gap-8 {
-  gap: var(--space-8);
+    gap: var(--space-8);
 }
 
 .gap-6 {
-  gap: var(--space-6);
+    gap: var(--space-6);
 }
 
 .gap-5 {
-  gap: var(--space-5);
+    gap: var(--space-5);
 }
 
 .gap-4 {
-  gap: var(--space-4);
+    gap: var(--space-4);
 }
 
 .gap-2 {
-  gap: var(--space-2);
+    gap: var(--space-2);
 }
 
 .gap-1 {
-  gap: var(--space-1);
+    gap: var(--space-1);
 }
 
 /* BACKGROUND -COLORS */
 
 .bg-orange {
-  background: var(--orange-primary);
+    background: var(--orange-primary);
 }
 
 .bg-card {
-  background: var(--bg-card);
+    background: var(--bg-card);
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: var(--bg-page);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg-page);
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  height: auto;
-  background: var(--bg-card);
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    background: var(--bg-card);
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-9);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-9);
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-}
-
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
-.button-site {
-  padding-top: var(--space-6);
-  padding-bottom: var(--space-6);
-  font-family: var(--font-mono);
-  border: none;
-}
-
-.bg-orange {
-  background-color: var(--orange-primary);
-}
-
-.bg-dark-surface {
-  background-color: var(--bg-surface);
-}
-
-.metrics-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--space-6);
-}
-
-.metric-card {
-  flex: 1 1 calc((100% - var(--space-6)) / 3);
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--bg-placeholder);
-  gap: var(--space-6);
-  padding: var(--space-6);
-}
-
-.projects-container{
     display: flex;
     flex-direction: column;
     gap: var(--space-5);
 }
 
-.projects-title{
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.button-site {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+    font-family: var(--font-mono);
+    border: none;
+}
+
+.bg-orange {
+    background-color: var(--orange-primary);
+}
+
+.bg-dark-surface {
+    background-color: var(--bg-surface);
+}
+
+.border-placeholder {
+    border: 1px solid var(--bg-placeholder);
+}
+
+.metrics-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+}
+
+.metric-card {
+    flex: 1 1 calc((100% - var(--space-6)) / 3);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bg-placeholder);
+    gap: var(--space-6);
+    padding: var(--space-6);
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.projects-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bg-placeholder);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.stack-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.chip-container {
+    display: flex;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
 }
