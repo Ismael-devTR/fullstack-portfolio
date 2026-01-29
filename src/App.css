@@ -297,7 +297,37 @@ body {
     display: flex;
 }
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 578px) {
+    .btn-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .button-site {
+        flex: 0 1 calc((100% - var(--space-6)) / 3);
+        padding: var(--space-6);
+    }
+
+    .metrics-container {
+        flex: 1 1;
+        flex-wrap: nowrap;
+    }
+
+    .card-container {
+        flex-direction: row;
+    }
+
+    .card {
+        flex: 1 1;
+        display: flex;
+    }
+
+    .contact>.button-site:last-child {
+        display: none;
+    }
 }

@@ -29,18 +29,24 @@ function App() {
   const techStack = ["React", "TS", "Node", "SQL"]
 
   const projects: ProjectCardProps[] = [
-   {
+    {
       img: "img",
-      
+
       type: "fullstack",
       title: "project title",
       description: "descriptions here"
-   }, {
+    }, {
       img: "img",
       type: "fullstack",
       title: "project title",
       description: "descriptions here"
-   }
+    }
+    , {
+      img: "img",
+      type: "fullstack",
+      title: "project title",
+      description: "descriptions here"
+    }
   ]
 
   return (
