@@ -3,13 +3,13 @@ import { forwardRef } from "react"
 
 type Variant = "orange" | "dark"
 
-interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
+interface ButtonProps extends ComponentPropsWithoutRef<"a"> {
   variant?: Variant
   children: ReactNode
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = "orange", children, className = "", type = "button", ...props }, ref) => {
+const Button = forwardRef<HTMLAnchorElement, ButtonProps>(
+  ({ variant = "orange", children, className = "", ...props }, ref) => {
     const variantStyles: Record<Variant, string> = {
       orange: "button-site bg-orange",
       dark: "button-site bg-dark-surface text-white",
@@ -19,14 +19,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${className}`.trim()
 
     return (
-      <button
+      <a
         ref={ref}
-        type={type}
         className={combinedClassName}
         {...props}
       >
         {children}
-      </button>
+      </a>
     )
   }
 )
