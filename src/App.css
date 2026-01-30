@@ -5,6 +5,7 @@
 
 a {
     text-decoration: none;
+    color: var(--bg-card);
 }
 
 /* ===========================
@@ -201,16 +202,17 @@ body {
 
 .navigation {
     display: flex;
-    justify-content: space-between;
     height: auto;
-    background: var(--bg-card);
 }
+
 
 .container {
     display: flex;
     flex-direction: column;
     gap: var(--space-9);
 }
+
+
 
 .hero {
     display: flex;
@@ -225,10 +227,13 @@ body {
 }
 
 .button-site {
+    display: flex;
+    justify-content: center;
     padding-top: var(--space-6);
     padding-bottom: var(--space-6);
     font-family: var(--font-mono);
     border: none;
+    cursor: pointer;
 }
 
 .bg-orange {
@@ -281,6 +286,27 @@ body {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--bg-placeholder);
+    overflow: hidden;
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: var(--bg-placeholder);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .project-image {
+    transform: scale(1.05);
 }
 
 .description {
@@ -326,8 +352,22 @@ body {
         flex: 1 1;
         display: flex;
     }
+}
+
+@media (min-width: 1024px) {
+    .navigation-container {
+        display: flex;
+        margin: 0 auto;
+        justify-items: flex-start;
+    }
+
+    .layout-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
     .contact>.button-site:last-child {
-        display: none;
+        width: calc(30% - var(--space-8));
     }
 }
