@@ -42,7 +42,7 @@ function App() {
           </span>
           <h1 className="text-white font-display">FULLSTACK DEVELOPER</h1>
           <p className="text-gray-600 text-xl font-mono">
-            Building scalable web applications with modern technologies
+            Full Stack Developer with 4 years of experience building fast, reliable web applications. I've worked across startups and enterprise, contribute to open source, and care deeply about performance and clean code.
           </p>
           <div className="btn-container">
             <Button
