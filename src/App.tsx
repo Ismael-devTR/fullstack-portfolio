@@ -18,15 +18,11 @@ function App() {
     },
     {
       labelCard: "Clients",
-      description: "5+",
-    },
-    {
-      labelCard: "Projects",
-      description: "5+",
+      description: "6+",
     },
     {
       labelCard: "Tools",
-      description: "5+",
+      description: "10+",
     },
   ];
 
