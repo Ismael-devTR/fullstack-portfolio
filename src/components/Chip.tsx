@@ -13,7 +13,10 @@ const Chip: FC<ChipProps> = ({ label, iconUrl }: ChipProps) => {
           src={iconUrl}
           alt={`${label} icon`}
           className="mr-2 shrink-0 object-contain"
-          style={{ width: "40px", height: "40px" }}
+          width={40}
+          height={40}
+          loading="lazy"
+          decoding="async"
         />
       )}
       {label}

@@ -29,7 +29,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     return (
       <div ref={ref} className={`${baseStyles} ${styles.card} ${className}`.trim()} {...props}>
         <span className={styles.label}>{labelCard}</span>
-        <h6 className={styles.description}>{description}</h6>
+        <p className={styles.description}>{description}</p>
       </div>
     )
   }

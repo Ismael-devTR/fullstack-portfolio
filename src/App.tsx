@@ -29,14 +29,14 @@ function App() {
   const projects: ProjectCardProps[] = [];
   return (
     <div className="layout">
-      <nav className="navigation bg-card p-6">
+      <nav className="navigation bg-card p-6" aria-label="Main navigation">
         <div className="layout-container">
           <span className="font-mono text-orange text-lg">//</span>{" "}
           <span className="font-display text-white text-xl">FULLSTACK</span>
         </div>
       </nav>
       <section className="layout-container container p-8">
-        <section className="hero fade-up">
+        <section className="hero">
           <span className="text-orange font-mono">
             // PORTFOLIO: Ismael Tristan
           </span>
@@ -61,15 +61,15 @@ function App() {
         </section>
         <section className="metrics-container fade-up" style={{ animationDelay: "0.15s" }}>
           {metrics.map((metric) => (
-            <Card {...metric} />
+            <Card key={metric.labelCard} {...metric} />
           ))}
         </section>
         {projects.length > 0 && (
           <section className="projects-container fade-up" style={{ animationDelay: "0.3s" }}>
             <span className="font-mono text-orange">// PROJECTS</span>
             <div className="projects-title">
-              <h3 className="font-display text-white text-2xl">RECENT WORK</h3>
-              <a className="font-mono text-orange" href="http://">
+              <h2 className="font-display text-white text-2xl">RECENT WORK</h2>
+              <a className="font-mono text-orange" href="https://github.com/Ismael-devTR" target="_blank" rel="noopener noreferrer">
                 Show_all()
               </a>
             </div>
@@ -82,19 +82,19 @@ function App() {
         )}
         <section className="stack-container gap-5 fade-up" style={{ animationDelay: "0.3s" }}>
           <span className="font-mono text-orange">// TECH_STACK</span>
-          <h3 className="font-display text-white text-2xl">TECHNOLOGIES</h3>
+          <h2 className="font-display text-white text-2xl">TECHNOLOGIES</h2>
           <div className="chip-container gap-4">
             {!stackLoading &&
               techStack?.map(
                 ({ name, iconUrl }: { name: string; iconUrl: string }) => (
-                  <Chip iconUrl={iconUrl} label={name} />
+                  <Chip key={name} iconUrl={iconUrl} label={name} />
                 )
               )}
           </div>
         </section>
         <section className="contact bg-card p-8 gap-5 fade-up" style={{ animationDelay: "0.45s" }}>
           <span className="font-mono text-orange">// CONTACT</span>
-          <h3 className="font-display text-white text-2xl">LET'S BUILD</h3>
+          <h2 className="font-display text-white text-2xl">LET'S BUILD</h2>
           <p className="font-mono text-gray-600 text-xl">
             Available for freelance and full-time opportunities
           </p>
