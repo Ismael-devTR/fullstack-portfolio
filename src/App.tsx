@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Button from "./components/ButtonSite";
 import Card, { type CardProps } from "./components/Card";
 import Chip from "./components/Chip";
@@ -6,43 +7,57 @@ import ProjectCard from "./components/ProjectCard";
 import { useFetch } from "./hooks/useFetch";
 
 function App() {
+  const { t, i18n } = useTranslation();
+
   const [techStack, stackLoading] = useFetch<{ name: string; iconUrl: string }>(
     "https://blog.itr-dev.com/api/skills"
   );
 
   const metrics: CardProps[] = [
     {
-      labelCard: "YEARS",
+      labelCard: t("metrics.years"),
       description: "5+",
       variant: "main",
     },
     {
-      labelCard: "Clients",
+      labelCard: t("metrics.clients"),
       description: "6+",
     },
     {
-      labelCard: "Tools",
+      labelCard: t("metrics.tools"),
       description: "10+",
     },
   ];
 
   const projects: ProjectCardProps[] = [];
+
+  const toggleLang = () => {
+    i18n.changeLanguage(i18n.language.startsWith("es") ? "en" : "es");
+  };
+
   return (
     <div className="layout">
       <nav className="navigation bg-card p-6" aria-label="Main navigation">
         <div className="layout-container">
           <span className="font-mono text-orange text-lg">//</span>{" "}
-          <span className="font-display text-white text-xl">FULLSTACK</span>
+          <span className="font-display text-white text-xl">{t("nav.title")}</span>
+          <button
+            onClick={toggleLang}
+            className="font-mono text-orange text-sm ml-auto"
+            aria-label="Toggle language"
+          >
+            {i18n.language.startsWith("es") ? "EN" : "ES"}
+          </button>
         </div>
       </nav>
       <section className="layout-container container p-8">
         <section className="hero">
           <span className="text-orange font-mono">
-            // PORTFOLIO: Ismael Tristan
+            {t("hero.label")}
           </span>
-          <h1 className="text-white font-display">FULLSTACK DEVELOPER</h1>
+          <h1 className="text-white font-display">{t("hero.heading")}</h1>
           <p className="text-gray-600 text-xl font-mono">
-            Full Stack Developer with 4 years of experience building fast, reliable web applications. I've worked across startups and enterprise, contribute to open source, and care deeply about performance and clean code.
+            {t("hero.description")}
           </p>
           <div className="btn-container">
             <Button
@@ -52,10 +67,10 @@ function App() {
               href="/cv/Ismael-Tristan-cv-en.pdf"
               variant="dark"
             >
-              Download_cv()
+              {t("hero.downloadCv")}
             </Button>
             <Button href="https://github.com/Ismael-devTR" target="_blank">
-              View_github()
+              {t("hero.viewGithub")}
             </Button>
           </div>
         </section>
@@ -66,11 +81,11 @@ function App() {
         </section>
         {projects.length > 0 && (
           <section className="projects-container fade-up" style={{ animationDelay: "0.3s" }}>
-            <span className="font-mono text-orange">// PROJECTS</span>
+            <span className="font-mono text-orange">{t("projects.label")}</span>
             <div className="projects-title">
-              <h2 className="font-display text-white text-2xl">RECENT WORK</h2>
+              <h2 className="font-display text-white text-2xl">{t("projects.heading")}</h2>
               <a className="font-mono text-orange" href="https://github.com/Ismael-devTR" target="_blank" rel="noopener noreferrer">
-                Show_all()
+                {t("projects.showAll")}
               </a>
             </div>
             <div className="card-container gap-5">
@@ -81,8 +96,8 @@ function App() {
           </section>
         )}
         <section className="stack-container gap-5 fade-up" style={{ animationDelay: "0.3s" }}>
-          <span className="font-mono text-orange">// TECH_STACK</span>
-          <h2 className="font-display text-white text-2xl">TECHNOLOGIES</h2>
+          <span className="font-mono text-orange">{t("stack.label")}</span>
+          <h2 className="font-display text-white text-2xl">{t("stack.heading")}</h2>
           <div className="chip-container gap-4">
             {!stackLoading &&
               techStack?.map(
@@ -93,16 +108,16 @@ function App() {
           </div>
         </section>
         <section className="contact bg-card p-8 gap-5 fade-up" style={{ animationDelay: "0.45s" }}>
-          <span className="font-mono text-orange">// CONTACT</span>
-          <h2 className="font-display text-white text-2xl">LET'S BUILD</h2>
+          <span className="font-mono text-orange">{t("contact.label")}</span>
+          <h2 className="font-display text-white text-2xl">{t("contact.heading")}</h2>
           <p className="font-mono text-gray-600 text-xl">
-            Available for freelance and full-time opportunities
+            {t("contact.availability")}
           </p>
           <span className="text-teal font-mono text-base">
             dev.tristan.romero@gmail.com
           </span>
           <Button href="mailto:dev.tristan.romero@gmail.com?subject=Portfolio Contact&body=Hi Ismael,%0D%0A%0D%0AI saw your portfolio and would like to talk about...">
-            Contact()
+            {t("contact.button")}
           </Button>
         </section>
       </section>

@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "title": "FULLSTACK"
+  },
+  "hero": {
+    "label": "// PORTAFOLIO: Ismael Tristan",
+    "heading": "DESARROLLADOR FULLSTACK",
+    "description": "Desarrollador Full Stack con 4 años de experiencia construyendo aplicaciones web rápidas y confiables. He trabajado en startups y empresas, contribuyo a código abierto y me importa profundamente el rendimiento y el código limpio.",
+    "downloadCv": "Descargar_cv()",
+    "viewGithub": "Ver_github()"
+  },
+  "metrics": {
+    "years": "AÑOS",
+    "clients": "Clientes",
+    "tools": "Herramientas"
+  },
+  "projects": {
+    "label": "// PROYECTOS",
+    "heading": "TRABAJOS RECIENTES",
+    "showAll": "Ver_todos()"
+  },
+  "stack": {
+    "label": "// TECNOLOGÍAS",
+    "heading": "TECNOLOGÍAS"
+  },
+  "contact": {
+    "label": "// CONTACTO",
+    "heading": "CONSTRUYAMOS JUNTOS",
+    "availability": "Disponible para freelance y oportunidades de tiempo completo",
+    "button": "Contactar()"
+  }
+}
