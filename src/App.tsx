@@ -69,7 +69,7 @@ function App() {
               download
               target="_blank"
               rel="noopener noreferer"
-              href="/cv/Ismael-Tristan-cv-en.pdf"
+              href={i18n.language.startsWith("es") ? "/cv/Ismael-Tristan-cv-es.pdf" : "/cv/Ismael-Tristan-cv-en.pdf"}
               variant="dark"
             >
               {t("hero.downloadCv")}
