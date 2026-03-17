@@ -38,15 +38,20 @@ function App() {
   return (
     <div className="layout">
       <nav className="navigation bg-card p-6" aria-label="Main navigation">
-        <div className="layout-container">
-          <span className="font-mono text-orange text-lg">//</span>{" "}
-          <span className="font-display text-white text-xl">{t("nav.title")}</span>
+        <div className="layout-container nav-inner">
+          <div>
+            <span className="font-mono text-orange text-lg">//</span>{" "}
+            <span className="font-display text-white text-xl">{t("nav.title")}</span>
+          </div>
           <button
             onClick={toggleLang}
-            className="font-mono text-orange text-sm ml-auto"
+            className="lang-switcher"
             aria-label="Toggle language"
           >
-            {i18n.language.startsWith("es") ? "EN" : "ES"}
+            <span className="font-mono text-gray-600 text-sm">lang:</span>
+            <span className="font-mono text-orange text-sm">
+              {i18n.language.startsWith("es") ? "ES" : "EN"}
+            </span>
           </button>
         </div>
       </nav>

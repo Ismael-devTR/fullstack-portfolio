@@ -228,6 +228,27 @@ body {
   height: auto;
 }
 
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lang-switcher:hover span:last-child {
+  text-decoration: underline;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -359,6 +380,35 @@ body {
   flex-direction: column;
 }
 
+/* ── Mobile-first base: < 578px ─────────────────────────── */
+@media (max-width: 577px) {
+  .container.p-8 > .layout-container,
+  section.layout-container {
+    padding-inline: var(--space-6);
+  }
+
+  /* reduce section padding so content breathes */
+  .container.p-8 {
+    padding: var(--space-6);
+  }
+
+  /* metric cards: full-width stack */
+  .metric-card {
+    flex: 1 1 100%;
+  }
+
+  /* contact button full width */
+  .contact > .button-site {
+    width: 100%;
+  }
+
+  /* hero heading: tighter line-height on narrow screens */
+  .hero h1 {
+    line-height: 1.1;
+  }
+}
+
+/* ── Small tablets: 578px – 1023px ──────────────────────── */
 @media (min-width: 578px) {
   .btn-container {
     display: flex;
@@ -385,6 +435,7 @@ body {
   }
 }
 
+/* ── Desktop: ≥ 1024px ───────────────────────────────────── */
 @media (min-width: 1024px) {
   .navigation-container {
     display: flex;
