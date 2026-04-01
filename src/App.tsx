@@ -29,7 +29,7 @@ function App() {
     },
   ];
 
-  const projects: ProjectCardProps[] = [];
+  const [projects, loadingProjects] = useFetch<ProjectCardProps>("https://blog.itr-dev.com/api/projects")
 
   const toggleLang = () => {
     i18n.changeLanguage(i18n.language.startsWith("es") ? "en" : "es");
@@ -84,7 +84,7 @@ function App() {
             <Card key={metric.labelCard} {...metric} />
           ))}
         </section>
-        {projects.length > 0 && (
+        {projects.length > 0 && !loadingProjects && (
           <section className="projects-container fade-up" style={{ animationDelay: "0.3s" }}>
             <span className="font-mono text-orange">{t("projects.label")}</span>
             <div className="projects-title">
@@ -94,8 +94,8 @@ function App() {
               </a>
             </div>
             <div className="card-container gap-5">
-              {projects.map((project) => (
-                <ProjectCard {...project} />
+              {projects.map((project: ProjectCardProps) => (
+                <ProjectCard key={project.id} {...project} />
               ))}
             </div>
           </section>
