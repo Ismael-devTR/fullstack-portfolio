@@ -198,6 +198,7 @@ a {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -289,7 +290,7 @@ body {
   border: 1px solid var(--bg-placeholder);
 }
 
-.bg-alternate-surface{
+.bg-alternate-surface {
   background-color: var(--bg-alternate-surface);
 }
 
@@ -323,8 +324,8 @@ body {
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .card {
@@ -359,6 +360,25 @@ body {
   flex-direction: column;
 }
 
+.card-description-wrapper>p {
+  transition: opacity 0.25s ease;
+  opacity: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.card-links > .button-site {
+  flex: 1;
+}
+
 .stack-container {
   display: flex;
   flex-direction: column;
@@ -370,9 +390,9 @@ body {
 }
 
 .chip {
-    display: flex;
-    gap: var(--space-2);
-    align-items: center;
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
 }
 
 .contact {
@@ -382,7 +402,8 @@ body {
 
 /* ── Mobile-first base: < 578px ─────────────────────────── */
 @media (max-width: 577px) {
-  .container.p-8 > .layout-container,
+
+  .container.p-8>.layout-container,
   section.layout-container {
     padding-inline: var(--space-6);
   }
@@ -398,7 +419,7 @@ body {
   }
 
   /* contact button full width */
-  .contact > .button-site {
+  .contact>.button-site {
     width: 100%;
   }
 
@@ -426,17 +447,16 @@ body {
   }
 
   .card-container {
-    flex-direction: row;
-  }
-
-  .card {
-    flex: 1 1;
-    display: flex;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* ── Desktop: ≥ 1024px ───────────────────────────────────── */
 @media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .navigation-container {
     display: flex;
     margin: 0 auto;
@@ -449,7 +469,7 @@ body {
     margin: 0 auto;
   }
 
-  .contact > .button-site:last-child {
+  .contact>.button-site:last-child {
     width: calc(30% - var(--space-8));
   }
 }

@@ -17,7 +17,9 @@
   "projects": {
     "label": "// PROJECTS",
     "heading": "RECENT WORK",
-    "showAll": "Show_all()"
+    "showAll": "Show_all()",
+    "demo": "Demo()",
+    "repo": "Repo()"
   },
   "stack": {
     "label": "// TECH_STACK",
