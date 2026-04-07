@@ -14,11 +14,12 @@ export interface ProjectCardProps {
     skills: { id: number }[]
     createdAt: string
     updatedAt: string
+    resolvedSkills?: { name: string; iconUrl: string }[]
 }
 
 const WORD_LIMIT = 15
 
-const ProjectCard: FC<ProjectCardProps> = ({ imageUrl, title, description, demoUrl, repoUrl }: ProjectCardProps) => {
+const ProjectCard: FC<ProjectCardProps> = ({ imageUrl, title, description, demoUrl, repoUrl, resolvedSkills }: ProjectCardProps) => {
     const { t } = useTranslation()
     const [expanded, setExpanded] = useState(false)
 
@@ -49,6 +50,21 @@ const ProjectCard: FC<ProjectCardProps> = ({ imageUrl, title, description, demoU
                         {isTruncatable && !expanded && <span className="text-orange">...</span>}
                     </p>
                 </div>
+                {resolvedSkills && resolvedSkills.length > 0 && (
+                    <div className="card-skills">
+                        <span className="font-mono text-orange text-xs">{t('projects.stack')}</span>
+                        <div className="card-skills-pills">
+                            {resolvedSkills.map(skill => (
+                                <span key={skill.name} className="card-skill-pill font-mono text-xs">
+                                    {skill.iconUrl && (
+                                        <img src={skill.iconUrl} alt={skill.name} width={12} height={12} loading="lazy" decoding="async" />
+                                    )}
+                                    {skill.name}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
                 <div className="card-links">
                     {demoUrl && (
                         <Button href={demoUrl} target="_blank" rel="noopener noreferrer">

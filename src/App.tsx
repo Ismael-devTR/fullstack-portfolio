@@ -9,7 +9,7 @@ import { useFetch } from "./hooks/useFetch";
 function App() {
   const { t, i18n } = useTranslation();
 
-  const [techStack, stackLoading] = useFetch<{ name: string; iconUrl: string }>(
+  const [techStack, stackLoading] = useFetch<{ id: number; name: string; iconUrl: string }>(
     "https://blog.itr-dev.com/api/skills"
   );
 
@@ -89,13 +89,17 @@ function App() {
             <span className="font-mono text-orange">{t("projects.label")}</span>
             <div className="projects-title">
               <h2 className="font-display text-white text-2xl">{t("projects.heading")}</h2>
-              <a className="font-mono text-orange" href="https://github.com/Ismael-devTR" target="_blank" rel="noopener noreferrer">
-                {t("projects.showAll")}
-              </a>
             </div>
             <div className="card-container gap-5">
               {projects.map((project: ProjectCardProps) => (
-                <ProjectCard key={project.id} {...project} />
+                <ProjectCard
+                  key={project.id}
+                  {...project}
+                  resolvedSkills={project.skills.flatMap(({ id }) => {
+                    const match = techStack.find(s => s.id === id)
+                    return match ? [{ name: match.name, iconUrl: match.iconUrl }] : []
+                  })}
+                />
               ))}
             </div>
           </section>

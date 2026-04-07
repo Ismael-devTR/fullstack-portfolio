@@ -5,7 +5,7 @@
   "hero": {
     "label": "// PORTFOLIO: Ismael Tristan",
     "heading": "FULLSTACK DEVELOPER",
-    "description": "Full Stack Developer with 4 years of experience building fast, reliable web applications. I've worked across startups and enterprise, contribute to open source, and care deeply about performance and clean code.",
+    "description": "Full Stack Developer with 5+ years of experience building fast, reliable web applications. I've worked across startups and enterprise, contribute to open source, and care deeply about performance and clean code.",
     "downloadCv": "Download_cv()",
     "viewGithub": "View_github()"
   },
@@ -19,7 +19,8 @@
     "heading": "RECENT WORK",
     "showAll": "Show_all()",
     "demo": "Demo()",
-    "repo": "Repo()"
+    "repo": "Repo()",
+    "stack": "// stack"
   },
   "stack": {
     "label": "// TECH_STACK",

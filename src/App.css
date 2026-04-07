@@ -365,17 +365,41 @@ body {
   opacity: 1;
 }
 
+.card-skills {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.card-skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.card-skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-5);
+  background: var(--bg-surface);
+  color: var(--white-primary);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--bg-placeholder);
+}
+
 .flex {
   display: flex;
 }
 
 .card-links {
+  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-.card-links > .button-site {
+.card-links>.button-site {
   flex: 1;
 }
 
