@@ -1,19 +1,26 @@
-import { type FC } from "react";
+import { useRef, type CSSProperties, type FC } from "react";
+import { useMouseGlow } from "../hooks/useMouseGlow";
 
 interface ChipProps {
   label: string;
   iconUrl?: string;
+  delay?: number;
 }
 
-const Chip: FC<ChipProps> = ({ label, iconUrl }: ChipProps) => {
+const Chip: FC<ChipProps> = ({ label, iconUrl, delay = 0 }: ChipProps) => {
+  const chipRef = useRef<HTMLDivElement>(null);
+  useMouseGlow(chipRef);
+
   return (
-    <div className="bg-dark-surface font-mono text-md text-white p-4 border-placeholder chip flex flex-row items-center">
+    <div
+      ref={chipRef}
+      className="chip font-mono text-md text-white"
+      style={{ transitionDelay: `${delay}ms` } as CSSProperties}
+    >
       {iconUrl && (
         <img
           src={iconUrl}
           alt={`${label} icon`}
-          className="mr-2 shrink-0 object-contain"
-          style={{ width: "40px", height: "40px" }}
         />
       )}
       {label}
