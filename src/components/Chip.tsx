@@ -21,6 +21,8 @@ const Chip: FC<ChipProps> = ({ label, iconUrl, delay = 0 }: ChipProps) => {
         <img
           src={iconUrl}
           alt={`${label} icon`}
+          loading="lazy"
+          decoding="async"
         />
       )}
       {label}

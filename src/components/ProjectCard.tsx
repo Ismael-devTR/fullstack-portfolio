@@ -1,6 +1,7 @@
 import { useState, type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import Button from './ButtonSite'
+import Chip from './Chip'
 
 export interface ProjectCardProps {
     id: number
@@ -55,12 +56,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ imageUrl, title, description, demoU
                         <span className="font-mono text-orange text-xs">{t('projects.stack')}</span>
                         <div className="card-skills-pills">
                             {resolvedSkills.map(skill => (
-                                <span key={skill.name} className="card-skill-pill font-mono text-xs">
-                                    {skill.iconUrl && (
-                                        <img src={skill.iconUrl} alt={skill.name} width={12} height={12} loading="lazy" decoding="async" />
-                                    )}
-                                    {skill.name}
-                                </span>
+                               <Chip key={skill.name} label={skill.name} iconUrl={skill.iconUrl} />
                             ))}
                         </div>
                     </div>
