@@ -3,14 +3,27 @@
   /* COLOR SYSTEM */
 
   /* backgrounds */
-  --bg-page: #1A1A1A;
+  --bg-page: #0a0a0f;
   --bg-card: #0D0D0D;
-  --bg-surface: #2D2D2D;
+  --bg-surface: #1a1a2e;
   --bg-placeholder: #3D3D3D;
   --bg-alternate-surface: #9b9a9a;
+
   /* accents */
   --orange-primary: #FF6B35;
+  --orange-glow: rgba(255, 107, 53, 0.4);
   --teal-success: #00D4AA;
+  --teal-glow: rgba(0, 212, 170, 0.3);
+
+  /* gradient palette */
+  --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #ff8f65 50%, #FF6B35 100%);
+  --gradient-hero: linear-gradient(180deg, #0a0a0f 0%, #111128 40%, #0a0a0f 100%);
+  --gradient-mesh: radial-gradient(ellipse at 20% 50%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
+                   radial-gradient(ellipse at 80% 20%, rgba(0, 212, 170, 0.06) 0%, transparent 50%),
+                   radial-gradient(ellipse at 50% 80%, rgba(255, 107, 53, 0.04) 0%, transparent 50%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+  --gradient-border: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(0, 212, 170, 0.3), rgba(255, 107, 53, 0.3));
+
   /* neutral */
   --white-primary: #FFFFFF;
   --gray-600: #888888;

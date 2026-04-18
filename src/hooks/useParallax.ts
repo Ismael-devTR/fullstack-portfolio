@@ -1,0 +1,23 @@
+import { useEffect, useState } from "react";
+
+export const useParallax = (speed = 0.5) => {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    let rafId: number;
+
+    const handleScroll = () => {
+      rafId = requestAnimationFrame(() => {
+        setOffset(window.scrollY * speed);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId);
+    };
+  }, [speed]);
+
+  return offset;
+};
